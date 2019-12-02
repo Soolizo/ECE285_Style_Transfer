@@ -19,7 +19,7 @@ Besides this code need to download VGG19 network
 
 ## Code organization
 
-demo.ipynb -- Run a demo of our code and showing different alpha/beta ratio's effect on the output image.  
+[demo.ipynb](https://github.com/Soolizo/ECE285_Style-Transfer/blob/master/Origin/Demo.ipynb)demo.ipynb -- Run a demo of our code and showing different alpha/beta ratio's effect on the output image.  
 image.py -- Contains the function that used to load and show image.  
 loss.py -- Contains the function to calculate the content loss, gram martix, style loss.  
 model.py -- Contains the VGG19 network and record the layer that need to calculate content loss and style loss.  
