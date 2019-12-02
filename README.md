@@ -8,7 +8,7 @@ This is ECE 285 final project Style Transfer developed by team Learning Machine 
 
 Origin Style Transfer
 ===========
-This is the version based on Gatys paper Style Transfer, it has test on the UCSD DSMLP.
+This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in Origin folder.
 
 ## Requirements
