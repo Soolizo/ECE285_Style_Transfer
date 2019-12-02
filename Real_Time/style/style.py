@@ -6,8 +6,8 @@ import numpy as np
 import scipy.misc
 from scipy.optimize import optimize
 from argparse import ArgumentParser
-from utils
-import evaluate
+# from utils
+# import evaluate
 
 Content_weight = 7.5e0
 STYLE_WEIGHT = 1e2
