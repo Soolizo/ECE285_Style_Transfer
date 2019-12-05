@@ -13,8 +13,10 @@ The code locates in Origin folder.
 
 ## Requirements
 
-install the package as fllow:  
+install the package as fllow:
+```
  $ pip3 install torch torchvision  
+```
 Besides this code need to download VGG19 network  
 
 ## Code organization
