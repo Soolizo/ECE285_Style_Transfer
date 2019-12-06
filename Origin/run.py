@@ -28,24 +28,15 @@ def run_style_transfer(content_img, style_img, input_img, num_epoches=300, alpha
         optimizer.zero_grad()
 
         for sl in style_loss_list: 
-
-#             style_score = style_score + sl.backward()
             style_score = style_score + sl.loss
 
         for cl in content_loss_list:
-
-#             content_score = content_score + cl.backward()
             content_score = content_score + cl.loss
 
         style_score = alpha * style_score
         content_score = beta * content_score
         loss = style_score + content_score
         loss.backward()
-#             loss = alpha * style_score +  beta * content_score
-#             print(loss)
-
-#             loss.backward()
-#             print(loss)
 
         epoch [0] += 1
         if epoch[0] % 50 == 0:
