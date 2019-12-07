@@ -32,11 +32,11 @@ The code locates in Origin folder.
 We use the content image from one of Picasso's master work, and style image from Kanagawa. Here is the output with α/β ratio equals to 10<sup>8</sup>(α is weight of style loss, β is weight of content loss).
 
 <div align=center />
-<img src="Origin/image/Cubic.png" width = "206" height = "206" alt="Content" align=center />
+<img src="Origin/image/Cubic.png" width = "256" height = "256" alt="Content" align=center />
 
-<img src="Origin/image/Kanagawa.png" width = "206" height = "206" alt="Style" align=center />
+<img src="Origin/image/Kanagawa.png" width = "256" height = "256" alt="Style" align=center />
 
-<img src="Origin/image/Result.png" width = "250" height = "250" alt="Result" align=center />
+<img src="Origin/image/result.png" width = "256" height = "256" alt="Result" align=center />
 </div>
 
   
