@@ -31,9 +31,11 @@ The code locates in Origin folder.
 ### Example
 We use the content image from one of Picasso's master work, and style image from Kanagawa. Here is the output with α/β ratio equals to 10<sup>8</sup>(α is weight of style loss, β is weight of content loss).
 
+<div align=center />
 <img src="Origin/image/Cubic.png" width = "206" height = "206" alt="Content" align=center />
-![Style](Origin/image/Kanagawa.png){:height="33" width="33"}
-![Result](Origin/image/Result.png){:height="33" width="33"}
+<img src="Origin/image/Kanagawa.png" width = "206" height = "206" alt="Style" align=center />
+<img src="Origin/image/Result.png" width = "206" height = "206" alt="Result" align=center />
+</div>
 
   
 Image-to-Image Translation using Cycle-GANs
