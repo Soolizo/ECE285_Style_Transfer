@@ -47,7 +47,7 @@ We use the content image from one of Picasso's master work, and style image from
   
 Image-to-Image Translation using Cycle-GANs
 ===========
-We used the picture Starry Night from WikiArt as our stylereference and trained our model with landscape images from FLickr as contents to be transferred.
+We used the picture Starry Night from WikiArt as our style reference and trained our model with landscape images from FLickr as contents to be transferred.
 
 
 ### Code organization
