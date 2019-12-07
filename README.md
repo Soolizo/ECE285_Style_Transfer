@@ -14,7 +14,7 @@ The origin style transfer also needs to download VGG19 network
   
   
   
-Origin Style Transfer
+Neural Style Transfer
 ===========
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in Origin folder.
@@ -27,7 +27,11 @@ The code locates in Origin folder.
 [model.py](https://github.com/Soolizo/ECE285_Style-Transfer/blob/master/Origin/model.py) -- Contains the VGG19 network and record the layer that need to calculate content loss and style loss.  
 [run.py](https://github.com/Soolizo/ECE285_Style-Transfer/blob/master/Origin/run.py) -- Contains the function with the initialization and how to compute the loss and optimize them.  
   
-  
+
+### Example
+We use the content image from one of Picasso's master work, and style image from Kanagawa. Here is the output with α/β ratio equals to 10<sup>8</sup>(α is weight of style loss, β is weight of content loss).
+
+![Neural Style Transfer](Origin/image/Result.png)
   
 Image-to-Image Translation using Cycle-GANs
 ===========
