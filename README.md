@@ -34,6 +34,6 @@ Image-to-Image Translation using Cycle-GANs
 
 ### Requirements
 
-## Code organization
+### Code organization
 
 
