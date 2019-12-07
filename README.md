@@ -33,8 +33,10 @@ We use the content image from one of Picasso's master work, and style image from
 
 <div align=center />
 <img src="Origin/image/Cubic.png" width = "206" height = "206" alt="Content" align=center />
+
 <img src="Origin/image/Kanagawa.png" width = "206" height = "206" alt="Style" align=center />
-<img src="Origin/image/Result.png" width = "206" height = "206" alt="Result" align=center />
+
+<img src="Origin/image/Result.png" width = "250" height = "250" alt="Result" align=center />
 </div>
 
   
