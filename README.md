@@ -32,7 +32,7 @@ The code locates in Origin folder.
 Image-to-Image Translation using Cycle-GANs
 ===========
 
-### Requirements
+
 
 ### Code organization
 
