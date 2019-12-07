@@ -13,6 +13,7 @@ install the package as fllow:
 The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GAN locates on the DSMLP of UCSD with the following directions:
 ```
 content_root_dir = "//datasets/ee285f-public/flickr_landscape/"
+
 style_root_dir = "/datasets/ee285f-public/wikiart/wikiart/"
 ```
   
@@ -46,7 +47,7 @@ We use the content image from one of Picasso's master work, and style image from
   
 Image-to-Image Translation using Cycle-GANs
 ===========
-
+we used the picture Starry Night from WikiArt as our stylereference and trained our model with landscape images from FLickr as contents to be transferred.
 
 
 ### Code organization
