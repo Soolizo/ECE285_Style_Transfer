@@ -14,7 +14,7 @@ Besides origin style transfer needs to download VGG19 network
   
   
   
-##Origin Style Transfer
+Origin Style Transfer
 ===========
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in Origin folder.
@@ -29,7 +29,7 @@ The code locates in Origin folder.
   
   
   
-##Image-to-Image Translation using Cycle-GANs
+Image-to-Image Translation using Cycle-GANs
 ===========
 
 ### Requirements
