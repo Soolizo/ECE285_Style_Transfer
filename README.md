@@ -1,8 +1,8 @@
-# ECE285_Style_Transfer
+# ECE285 Style ransfer
 
 
 ### Description
-This is ECE 285 final project Style Transfer developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
+This is ECE 285 final project b Style Transfer developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
 
 ### Requirements
 
