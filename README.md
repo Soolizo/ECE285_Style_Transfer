@@ -31,7 +31,7 @@ The code locates in Origin folder.
 ### Example
 We use the content image from one of Picasso's master work, and style image from Kanagawa. Here is the output with α/β ratio equals to 10<sup>8</sup>(α is weight of style loss, β is weight of content loss).
 
-![Content](Origin/image/Cubic.png){:height="33" width="33"}
+<img src="Origin/image/Cubic.png" width = "206" height = "206" alt="Content" align=center />
 ![Style](Origin/image/Kanagawa.png){:height="33" width="33"}
 ![Result](Origin/image/Result.png){:height="33" width="33"}
 
