@@ -10,7 +10,11 @@ install the package as fllow:
 ```
  $ pip3 install torch torchvision  
 ```
-The origin style transfer also needs to download VGG19 network  
+The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GAN locates on the DSMLP of UCSD with the following direction:
+```
+content_root_dir = "//datasets/ee285f-public/flickr_landscape/"
+style_root_dir = "/datasets/ee285f-public/wikiart/wikiart/"
+```
   
   
   
