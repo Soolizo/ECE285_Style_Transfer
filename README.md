@@ -1,15 +1,8 @@
-# ECE285_Style-Transfer
+# ECE285_Style_Transfer
 
 
 ## Description
 This is ECE 285 final project Style Transfer developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
-
-
-
-Origin Style Transfer
-===========
-This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
-The code locates in Origin folder.
 
 ## Requirements
 
@@ -17,7 +10,12 @@ install the package as fllow:
 ```
  $ pip3 install torch torchvision  
 ```
-Besides this code need to download VGG19 network  
+Besides origin style transfer needs to download VGG19 network  
+
+Origin Style Transfer
+===========
+This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
+The code locates in Origin folder.
 
 ## Code organization
 
@@ -29,5 +27,11 @@ Besides this code need to download VGG19 network
 
 
 
-Real Time Transfer
+Image-to-Image Translation using Cycle-GANs
 ===========
+
+## Requirements
+
+## Code organization
+
+
