@@ -116,9 +116,9 @@ To visualize the result, check
  * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
  
  <div align=center />
-<img src="cycleGAN/proj_report_img/domain_exp_largeBS_decay_train.png" height = "400"   />
+<img src="cycleGAN/proj_report_img/domain_exp_largeBS_decay_train.png" height = "300"   />
 
-<img src="cycleGAN/proj_report_img/domain_exp_largeBS_decay.png" height = "400" />
+<img src="cycleGAN/proj_report_img/domain_exp_largeBS_decay.png" height = "300" />
 </div>
 
  
