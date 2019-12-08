@@ -16,7 +16,7 @@ install the package as fllow:
 ```
  $ pip3 install torch torchvision  
 ```
-The origin style transfer also require to downloadVGG19 network. 
+The origin style transfer also requires to download VGG19 network. 
 
 ### Code organization
 
