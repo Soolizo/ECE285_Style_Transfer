@@ -23,7 +23,7 @@ style_root_dir = "/datasets/ee285f-public/wikiart/"
 Part I: Neural Style Transfer
 ===========
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
-The code locates in [`Origin`](./Origin) folder.
+The code locates in [`**Origin**`](./Origin) folder.
 
 ### Code organization
 
