@@ -46,7 +46,11 @@ We use the content image from one of Picasso's masterpiece, and style image from
 
        
 	
-    	
+    
+    
+    
+    
+    
     	 
 Part II: Image-to-Image Translation using Cycle-GANs
 ====================================================
