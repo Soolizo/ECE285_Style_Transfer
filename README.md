@@ -20,8 +20,8 @@ style_root_dir = "/datasets/ee285f-public/wikiart/"
   </br>
   </br>
   
-Part I: Neural Style Transfer
-===========
+## Part I: Neural Style Transfer
+
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in [__`Origin`__](./Origin) folder.
 
@@ -51,8 +51,8 @@ We use the content image from one of Picasso's masterpiece, and style image from
 </br>
 </br>
     	 
-Part II: Image-to-Image Translation using Cycle-GANs
-====================================================
+## Part II: Image-to-Image Translation using Cycle-GANs
+
 ### Description
 Image-to-Image Translation using Cycle-GANs has been tested on UCSD DSMLP.
 The code locates in [__`cycleGAN`__](./cycleGAN) folder.
