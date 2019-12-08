@@ -76,49 +76,49 @@ $ pip install --user LIBRARY_MISSING
 ### Code organization
 
 `./`
- * [`proj_report_img/`](./proj_report_img)
- * [`cGAN_model/`](./cGAN_model)
+ * [`proj_report_img/`](./cycleGAN/proj_report_img)
+ * [`cGAN_model/`](./cycleGAN/cGAN_model)
    * `__init__.py`
-   * [`ganNet.py`](./cGAN_model/ganNet.py), [`ganNet_domain.py`](./cGAN_model/ganNet_domain.py)
+   * [`ganNet.py`](./cycleGAN/cGAN_model/ganNet.py), [`ganNet_domain.py`](./cycleGAN/cGAN_model/ganNet_domain.py)
    
    			Main classes of Generator, Discriminator,
             Trainer, and Training Experiment for 
             picture-orientated CycleGAN and 
             domain-orientated CycleGAN respectively
-   * [`styleDataSet.py`](./cGAN_model/styleDataSet.py), [`domainStyleDataSet.py`](./cGAN_model/domainStyleDataSet.py)
+   * [`styleDataSet.py`](./cycleGAN/cGAN_model/styleDataSet.py), [`domainStyleDataSet.py`](./cycleGAN/cGAN_model/domainStyleDataSet.py)
    
    			Class(_td.Dataset_) for loading dataset 
             from given path for picture-orientated CycleGAN and 
             domain-orientated CycleGAN respectively
             
-    * [`nntools.py`](./cGAN_model/nntools.py), [`DnCNN.py`](./cGAN_model/DnCNN.py)
+    * [`nntools.py`](./cycleGAN/cGAN_model/nntools.py), [`DnCNN.py`](./cycleGAN/cGAN_model/DnCNN.py)
    			
             Classes adapeted from Assignment 4,
             used for building CycleGAN networks
- * [`cGAN_ckpts/`](./cGAN_ckpts)
+ * [`cGAN_ckpts/`](./cycleGAN/cGAN_ckpts)
  
         Contains numerous checkpoint folders 
         for loading/continue pre-trained models
- * [`CycleGAN_demo.ipynb`](./CycleGAN_demo.ipynb)  
+ * [`CycleGAN_demo.ipynb`](./cycleGAN/CycleGAN_demo.ipynb)  
  
         Run a demo of our code transfering content picture 
         based on one single style picture. (reproduces
         Figure 1 and Figure 2 of our report)  
- * [`domain_CycleGAN_demo.ipynb`](./domain_CycleGAN_demo.ipynb) 
+ * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
  
 		Run a demo of our code transfering content picture
         based on an aritist's domain. (reproduces 
         Figure 3 of our report)
- * [`cGAN_train.py`](./cGAN_train.py)  
+ * [`cGAN_train.py`](./cycleGAN/cGAN_train.py)  
  
         Run training of our model through python script.
         Able to run in background with flags to customize settings 
         such as domain to train, use large train_set, and etc..  
- * [house.jpg](./house.jpg), [starry_night.jpg](./starry_night.jpg)
+ * [house.jpg](./cycleGAN/house.jpg), [starry_night.jpg](./cycleGAN/starry_night.jpg)
 
 ### Example
 To visualize the result, check 
- * [`domain_CycleGAN_demo.ipynb`](./domain_CycleGAN_demo.ipynb) 
+ * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
  
 
  
