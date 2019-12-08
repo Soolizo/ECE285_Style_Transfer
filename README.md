@@ -2,7 +2,7 @@
 
 
 ### Description
-This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of Bowen Zhao, Bolin He, Kunpeng Liu.
+This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of `Bowen Zhao`, `Bolin He`, `Kunpeng Liu`.
 
 ### Requirements
 
@@ -10,7 +10,7 @@ install the package as fllow:
 ```
  $ pip3 install torch torchvision  
 ```
-The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GAN locates on the DSMLP of UCSD with the following directions:
+The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GANs locates on the DSMLP of UCSD with the following directions:
 ```
 content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
 
@@ -58,7 +58,12 @@ Image-to-Image Translation using Cycle-GANs has been tested on UCSD DSMLP.
 The code locates in [__`cycleGAN`__](./cycleGAN) folder.
 
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
-using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). In our pretrained model saved in checkpoint folders, we used the picture [_starry night_](https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889) as our style referrence and trained our model with landscape images from [FLickr](https://www.flickr.com/groups/landcape/) as contents to be transferred.
+using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). 
+
+In our experiment, the content train dataset is landcape pictures from [FLickr](https://www.flickr.com/groups/landcape/), and the style train dataset is Vincent van Gogh artworks from [WikiArt5](https://www.wikiart.org/en). We successful use DnCNN in Assignment 4 with three configuration: 
+[`exp_smallBS`](./cycleGAN/proj_report_img/domain_exp_long_train.png)
+[`exp_largeBS`](./cycleGAN/proj_report_img/domain_large_bs_train.png)
+[`exp_largeBS_decay`](./cycleGAN/proj_report_img/domain_exp_largeBS_decay_train.png).
 
 ### Requirements
 
@@ -122,4 +127,4 @@ To visualize the result, check
 </div>
  
   
-
+ 
