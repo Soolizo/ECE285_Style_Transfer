@@ -50,14 +50,14 @@ We use the content image from one of Picasso's masterpiece, and style image from
 Part II: Image-to-Image Translation using Cycle-GANs
 ====================================================
 ### Description
-==============
+
 This is the second part of project Style Transfer developed by team composed of Bolin He, Kunpeng Liu, Bowen Zhao.
 
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
 using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). In our pretrained model saved in checkpoint folders, we used the picture [_starry night_](https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889) as our style referrence and trained our model with landscape images from [FLickr](https://www.flickr.com/groups/landcape/) as contents to be transferred.
 
 ### Requirements
-================
+
 In our implementation of the project, we do not require any extra packages besides the ones provided by the class environment: `os`, `time`, `numpy`, `pandas`, `torch`, `torchvision`, `PIL`, and `matplotlib`.
 
 To run the training scripts outside of the class environment, you may need to install some of the packages above. To install a missing package `LIBRARY_MISSING`, you may do the following command:  
@@ -66,7 +66,7 @@ $ pip install --user LIBRARY_MISSING
 ```
 
 ### Code organization
-=====================  
+
 `./`
  * [`proj_report_img/`](./proj_report_img)
  * [`cGAN_model/`](./cGAN_model)
@@ -109,5 +109,5 @@ $ pip install --user LIBRARY_MISSING
  * [house.jpg](./house.jpg), [starry_night.jpg](./starry_night.jpg)
 
 ### Example
-===========
+
 
