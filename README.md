@@ -1,5 +1,7 @@
 # ECE285 Style Transfer
 
+### Description
+
 This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of `Bowen Zhao`, `Bolin He`, `Kunpeng Liu`.
 
   </br>
