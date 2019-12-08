@@ -1,19 +1,8 @@
-# ECE285 Style ransfer
+# ECE285 Style Transfer
 
 
 ### Description
 This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
-
-
-  
-  </br>
-  </br>
-  
-Part I: Neural Style Transfer
-===========
-### Description
-This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
-The code locates in Origin folder.
 
 ### Requirements
 
@@ -21,6 +10,20 @@ install the package as fllow:
 ```
  $ pip3 install torch torchvision  
 ```
+The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GAN locates on the DSMLP of UCSD with the following directions:
+```
+content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
+
+style_root_dir = "/datasets/ee285f-public/wikiart/"
+```
+  
+  </br>
+  </br>
+  
+Part I: Neural Style Transfer
+===========
+This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
+The code locates in [Origin](./Origin) folder.
 
 ### Code organization
 
@@ -56,7 +59,7 @@ Part II: Image-to-Image Translation using Cycle-GANs
 ====================================================
 ### Description
 Image-to-Image Translation using Cycle-GANs has been tested on UCSD DSMLP.
-The code locates in cycleGAN folder.
+The code locates in [cycleGAN](./cycleGAN) folder.
 
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
 using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). In our pretrained model saved in checkpoint folders, we used the picture [_starry night_](https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889) as our style referrence and trained our model with landscape images from [FLickr](https://www.flickr.com/groups/landcape/) as contents to be transferred.
