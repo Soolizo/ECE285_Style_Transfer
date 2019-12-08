@@ -38,9 +38,9 @@ The origin style transfer also requires to download VGG19 network.
 ### Example
 We use the content image from one of Picasso's masterpiece, and style image from Kanagawa. Here is the output with α/β ratio equals to 10<sup>8</sup>(α is the weight of style loss, β is the weight of content loss).
 
-* To visualize the result, check
+To visualize the result, check
 
-[`demo.ipynb`](https://github.com/Soolizo/ECE285_Style-Transfer/blob/master/Origin/Demo.ipynb) 
+* [`demo.ipynb`](https://github.com/Soolizo/ECE285_Style-Transfer/blob/master/Origin/Demo.ipynb) 
 
 
 </br>
