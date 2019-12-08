@@ -44,9 +44,10 @@ We use the content image from one of Picasso's masterpiece, and style image from
 <img src="Origin/image/result.png" width = "256" height = "256" alt="Result" align=center />
 </div>
 
- 
- 
- 
+       
+	
+    	
+    	 
 Part II: Image-to-Image Translation using Cycle-GANs
 ====================================================
 ### Description
