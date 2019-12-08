@@ -4,26 +4,23 @@
 ### Description
 This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
 
-### Requirements
 
-install the package as fllow:
-```
- $ pip3 install torch torchvision  
-```
-The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GAN locates on the DSMLP of UCSD with the following directions:
-```
-content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
-
-style_root_dir = "/datasets/ee285f-public/wikiart/"
-```
   
   </br>
   </br>
   
 Part I: Neural Style Transfer
 ===========
+### Description
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in Origin folder.
+
+### Requirements
+
+install the package as fllow:
+```
+ $ pip3 install torch torchvision  
+```
 
 ### Code organization
 
