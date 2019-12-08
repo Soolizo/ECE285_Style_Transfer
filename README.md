@@ -104,11 +104,7 @@ $ pip install --user LIBRARY_MISSING
  
         Contains numerous checkpoint folders 
         for loading/continue pre-trained models
- * [`CycleGAN_demo.ipynb`](./cycleGAN/CycleGAN_demo.ipynb)  
- 
-        Run a demo of our code transfering content picture 
-        based on one single style picture. (reproduces
-        Figure 1 and Figure 2 of our report)  
+
  * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
  
 		Run a demo of our code transfering content picture
@@ -119,7 +115,9 @@ $ pip install --user LIBRARY_MISSING
         Run training of our model through python script.
         Able to run in background with flags to customize settings 
         such as domain to train, use large train_set, and etc..  
-
+ * [`myimage.py`](./cycleGAN/myimage.py)  
+ 
+        Some function that help to plot. 
 ### Example
 To visualize the result, check 
  * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
