@@ -60,8 +60,10 @@ The code locates in [__`cycleGAN`__](./cycleGAN) folder.
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
 using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). 
 
-In our experiment, the content train dataset is landcape pictures from [FLickr](https://www.flickr.com/groups/landcape/), and the style train dataset is Vincent van Gogh artworks from [WikiArt5](https://www.wikiart.org/en). We successful use DnCNN in Assignment 4 with three configuration: [`exp_smallBS`](./cycleGAN/proj_report_img/domain_exp_long_train.png)
-, [`exp_largeBS`](./cycleGAN/proj_report_img/domain_large_bs_train.png), [`exp_largeBS_decay`](./cycleGAN/proj_report_img/domain_exp_largeBS_decay_train.png).
+In our experiment, the content train dataset is landcape pictures from [FLickr](https://www.flickr.com/groups/landcape/), and the style train dataset is Vincent van Gogh artworks from [WikiArt5](https://www.wikiart.org/en). We successful use DnCNN in Assignment 4 with three configuration: 
+[`exp_smallBS`](./cycleGAN/proj_report_img/domain_exp_long_train.png)
+[`exp_largeBS`](./cycleGAN/proj_report_img/domain_large_bs_train.png)
+[`exp_largeBS_decay`](./cycleGAN/proj_report_img/domain_exp_largeBS_decay_train.png).
 
 ### Requirements
 
