@@ -11,7 +11,7 @@ from PIL import Image
 import matplotlib.pyplot as plt 
 import nntools as nt
 from itertools import chain
-from DnCNN import DnCNN
+from cGAN_model.DnCNN import DnCNN
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 transform = tv.transforms.Compose([
@@ -23,13 +23,20 @@ transform = tv.transforms.Compose([
 style_ref = Image.open("./starry_night.jpg").convert('RGB')
 style_ref = transform(style_ref)
 
+
+# Generator and Discriminator for GAN
+# Generator use DnCNN from HW4, with MSE loss
+
 class Generator(DnCNN):
     def __init__(self, D, C=64):
         super(Generator, self).__init__(D)
         
     def criterion(self, y, d):
         return nn.MSELoss()(y, d)
-        
+
+    
+# Discriminator use 4 layers of CNN (3 -> 16, 64, 256, 256) along with instNorm and RELU for transforming the image. Then, it use CNN(256 -> 1) for discriminating decision making
+
 class Discriminator(DnCNN):
     def __init__(self, D, C=64):
         super(Discriminator, self).__init__(D)
@@ -50,44 +57,48 @@ class Discriminator(DnCNN):
     
     def criterion(self, y, d):
         return nn.L1Loss()(y, d)
+
+# Trainer class used to train cycle GAN, geting loss/gradient for generator and discriminator and do optimization with Adam.    
+    
     
 class CGANTrainer():
 
-    def __init__(self, gen2s, gen2c, dis_c, dis_s, device):
+    def __init__(self, device, D=6):
         self.device = device
         
-        self.gen2s = gen2s
-        self.gen2c = gen2c
-        self.dis_c = dis_c
-        self.dis_s = dis_s
+        self.gen2s = Generator(D).to(device)
+        self.gen2c = Generator(D).to(device)
+        self.dis_c = Discriminator().to(device)
+        self.dis_s = Discriminator().to(device)
         
-        self.lr = 1e-3
-        self.adam_gen = torch.optim.Adam(chain(gen2s.parameters(), gen2c.parameters()), lr=self.lr, betas=(0.5,0.999))
-        self.adam_dis_c = torch.optim.Adam(dis_c.parameters(), lr=self.lr, betas=(0.5,0.999))
-        self.adam_dis_s = torch.optim.Adam(dis_s.parameters(), lr=self.lr, betas=(0.5,0.999))
+        self.lr = 2e-3
+        self.adam_gen = torch.optim.Adam(chain(self.gen2s.parameters(), self.gen2c.parameters()), 
+                                         lr=self.lr, betas=(0.5,0.999))
+        self.adam_dis_c = torch.optim.Adam(self.dis_c.parameters(), lr=self.lr, betas=(0.5,0.999))
+        self.adam_dis_s = torch.optim.Adam(self.dis_s.parameters(), lr=self.lr, betas=(0.5,0.999))
+        
+        self.scheduler_gen = torch.optim.lr_scheduler.StepLR(self.adam_gen, step_size=2, gamma=0.99)
+        self.scheduler_dis_c = torch.optim.lr_scheduler.StepLR(self.adam_dis_c, step_size=2, gamma=0.99)
+        self.scheduler_dis_s = torch.optim.lr_scheduler.StepLR(self.adam_dis_s, step_size=2, gamma=0.99)
         
         self.l1Loss = nn.L1Loss().to(self.device)
         self.l2Loss = nn.MSELoss().to(self.device)
         
     def forward(self, content, style):
+        """
+        Prepare generated tensors for training.
+        Must be called before calling train_generator/train_discriminator
+        """
         self.content = content
         self.style = style
         self.S_c = self.gen2s(content)
         self.C_S_c = self.gen2c(self.S_c)
         self.C_s = self.gen2c(style)
         self.S_C_s = self.gen2s(self.C_s)
-        
     def train_generator(self):  
         self.adam_gen.zero_grad()
 
         totalLoss = 0
-
-        # get identity loss for same input same output            
-#         gen_style = self.gen2s(self.style)
-#         totalLoss += self.l1Loss(gen_style, self.style)
-        
-#         gen_content = self.gen2c(self.content)
-#         totalLoss += self.l1Loss(gen_content, self.content)
 
         # get Discriminator Loss
         disS= self.dis_s(self.S_c)
@@ -112,28 +123,23 @@ class CGANTrainer():
     def train_discriminator(self, mode):
         """
         Train the discriminator. 
-        mode == 0: input content, train the discriminator for style 
-        mode == 1: input style, train the discriminator for content
-        ref: real picture to distinguish from
+        mode == 0: train the discriminator for style 
+        mode == 1: train the discriminator for content
         """
 
-        assert (mode == 0 or mode == 1), "input must be 0(in: content) or 1(in: style)" 
+        assert (mode == 0 or mode == 1), "input must be 0(train dis_s) or 1(train dis_c)" 
 
         if mode == 0:
-            # Train the discrimination for style
-            # Input a content file, and generate a fake style
-            
+            # Train the style discriminator           
             adam_dis = self.adam_dis_s
-            dis, gen, ori = self.dis_s, self.S_c, self.style #self.gen2s
+            dis, gen, ori = self.dis_s, self.S_c, self.style
         else:
-            # Train the discrimination for content
-            # Input a style file, and generate a fake content
+            # Train the content discriminator
             adam_dis = self.adam_dis_c
-            dis, gen, ori = self.dis_c, self.C_s, self.content #self.gen2c
+            dis, gen, ori = self.dis_c, self.C_s, self.content
         
             
         adam_dis.zero_grad()   
-        
         totalLoss = 0
         
         disReal = dis(ori)
@@ -145,7 +151,6 @@ class CGANTrainer():
         dis_fake = dis(gen.detach())
         fake_var = Variable(torch.cuda.FloatTensor(dis_fake.shape).fill_(0.0),
                             requires_grad = False)
-
         totalLoss += self.l2Loss(dis_fake, fake_var)
         
         # update discriminator
@@ -153,6 +158,26 @@ class CGANTrainer():
         adam_dis.step()
         return totalLoss
     
+    def train(self, content, style):
+        dis_loss, gen_loss = 0, 0 
+        
+        self.forward(content, style)
+        # train discrimiator
+        dis_loss += self.train_discriminator(0).item()
+        dis_loss += self.train_discriminator(1).item()
+            
+        # train generator
+        gen_loss = self.train_generator().item()
+        
+        return gen_loss, dis_loss, dis_loss + gen_loss
+    
+    def update_lr(self):
+        self.scheduler_gen.step()
+        self.scheduler_dis_c.step()
+        self.scheduler_dis_s.step()
+
+#Experiment inherited from nt.Experiment. Being able to run experiment, save/load check points.        
+        
 class CGANexp(nt.Experiment):
     def __init__(self, cGANTrainer, train_set, output_dir, 
                  picNum = 100, batch_size=16, device = device,
