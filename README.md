@@ -2,7 +2,7 @@
 
 
 ### Description
-This is ECE 285 final project b Style Transfer developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
+This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of Bowen Zhao, Bolin HE, Kunpeng Liu.
 
 ### Requirements
 
@@ -17,7 +17,8 @@ content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
 style_root_dir = "/datasets/ee285f-public/wikiart/"
 ```
   
-  
+  </br>
+  </br>
   
 Part I: Neural Style Transfer
 ===========
@@ -48,15 +49,17 @@ We use the content image from one of Picasso's masterpiece, and style image from
 	
     
     
-    
-    
-    
+</br>
+</br>
+</br>
+</br>
+</br>
     	 
 Part II: Image-to-Image Translation using Cycle-GANs
 ====================================================
 ### Description
-
-This is the second part of project Style Transfer developed by team composed of Bolin He, Kunpeng Liu, Bowen Zhao.
+Image-to-Image Translation using Cycle-GANs has been tested on UCSD DSMLP.
+The code locates in cycleGAN folder.
 
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
 using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). In our pretrained model saved in checkpoint folders, we used the picture [_starry night_](https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889) as our style referrence and trained our model with landscape images from [FLickr](https://www.flickr.com/groups/landcape/) as contents to be transferred.
@@ -114,5 +117,9 @@ $ pip install --user LIBRARY_MISSING
  * [house.jpg](./house.jpg), [starry_night.jpg](./starry_night.jpg)
 
 ### Example
+To visualize the result, check 
+ * [`domain_CycleGAN_demo.ipynb`](./domain_CycleGAN_demo.ipynb) 
+ 
 
+ 
 
