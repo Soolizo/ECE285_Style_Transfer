@@ -1,8 +1,22 @@
 # ECE285 Style Transfer
 
+This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of 
+
+`Bowen Zhao`
+
+`Bolin He`
+
+`Kunpeng Liu`.
+
+  </br>
+  </br>
+  
+## Part I: Neural Style Transfer
 
 ### Description
-This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of `Bowen Zhao`, `Bolin He`, `Kunpeng Liu`.
+
+This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
+The code locates in [__`Origin`__](./Origin) folder. 
 
 ### Requirements
 
@@ -10,21 +24,7 @@ install the package as fllow:
 ```
  $ pip3 install torch torchvision  
 ```
-The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GANs locates on the DSMLP of UCSD with the following directions:
-```
-content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
-```
-```
-style_root_dir = "/datasets/ee285f-public/wikiart/"
-```
-   
-  </br>
-  </br>
-  
-## Part I: Neural Style Transfer
-
-This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
-The code locates in [__`Origin`__](./Origin) folder.
+The origin style transfer also requires to download VGG19 network. 
 
 ### Code organization
 
@@ -38,6 +38,12 @@ The code locates in [__`Origin`__](./Origin) folder.
 ### Example
 We use the content image from one of Picasso's masterpiece, and style image from Kanagawa. Here is the output with α/β ratio equals to 10<sup>8</sup>(α is the weight of style loss, β is the weight of content loss).
 
+* To visualize the result, check
+
+[`demo.ipynb`](https://github.com/Soolizo/ECE285_Style-Transfer/blob/master/Origin/Demo.ipynb) 
+
+
+</br>
 <div align=center />
 <img src="Origin/image/Cubic.png" width = "256" height = "256" alt="Content" align=center />
 
@@ -104,11 +110,7 @@ $ pip install --user LIBRARY_MISSING
  
         Contains numerous checkpoint folders 
         for loading/continue pre-trained models
- * [`CycleGAN_demo.ipynb`](./cycleGAN/CycleGAN_demo.ipynb)  
- 
-        Run a demo of our code transfering content picture 
-        based on one single style picture. (reproduces
-        Figure 1 and Figure 2 of our report)  
+
  * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
  
 		Run a demo of our code transfering content picture
@@ -119,7 +121,9 @@ $ pip install --user LIBRARY_MISSING
         Run training of our model through python script.
         Able to run in background with flags to customize settings 
         such as domain to train, use large train_set, and etc..  
-
+ * [`myimage.py`](./cycleGAN/myimage.py)  
+ 
+        Some function that help to plot. 
 ### Example
 To visualize the result, check 
  * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
