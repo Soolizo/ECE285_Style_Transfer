@@ -16,7 +16,7 @@ content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
 
 style_root_dir = "/datasets/ee285f-public/wikiart/"
 ```
-  
+   
   </br>
   </br>
   
