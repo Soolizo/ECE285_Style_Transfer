@@ -23,7 +23,7 @@ style_root_dir = "/datasets/ee285f-public/wikiart/"
 Part I: Neural Style Transfer
 ===========
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
-The code locates in [`**Origin**`](./Origin) folder.
+The code locates in [__`Origin`__](./Origin) folder.
 
 ### Code organization
 
@@ -55,7 +55,7 @@ Part II: Image-to-Image Translation using Cycle-GANs
 ====================================================
 ### Description
 Image-to-Image Translation using Cycle-GANs has been tested on UCSD DSMLP.
-The code locates in [cycleGAN](./cycleGAN) folder.
+The code locates in [__`cycleGAN`__](./cycleGAN) folder.
 
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
 using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). In our pretrained model saved in checkpoint folders, we used the picture [_starry night_](https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889) as our style referrence and trained our model with landscape images from [FLickr](https://www.flickr.com/groups/landcape/) as contents to be transferred.
