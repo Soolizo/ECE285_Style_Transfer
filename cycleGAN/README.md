@@ -56,4 +56,3 @@ Code organization
         Run training of our model through python script.
         Able to run in background with flags to customize settings 
         such as domain to train, use large train_set, and etc..  
- * [house.jpg](./house.jpg), [starry_night.jpg](./starry_night.jpg)
