@@ -19,7 +19,7 @@ style_root_dir = "/datasets/ee285f-public/wikiart/wikiart/"
   
   
   
-Neural Style Transfer
+Part I: Neural Style Transfer
 ===========
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in Origin folder.
@@ -44,18 +44,20 @@ We use the content image from one of Picasso's masterpiece, and style image from
 <img src="Origin/image/result.png" width = "256" height = "256" alt="Result" align=center />
 </div>
 
-  
-Image-to-Image Translation using Cycle-GANs
-===========
-Description
-===========
+ 
+ 
+ 
+Part II: Image-to-Image Translation using Cycle-GANs
+====================================================
+### Description
+==============
 This is the second part of project Style Transfer developed by team composed of Bolin He, Kunpeng Liu, Bowen Zhao.
 
 In this part, we implemented a real-time Sytle Transfer using Cycle-GANs introduced in paper [_Unpaired Image-to-Image Translation
 using Cycle-Consistent Adversarial Networks_](https://arxiv.org/pdf/1703.10593.pdf). In our pretrained model saved in checkpoint folders, we used the picture [_starry night_](https://www.wikiart.org/en/vincent-van-gogh/the-starry-night-1889) as our style referrence and trained our model with landscape images from [FLickr](https://www.flickr.com/groups/landcape/) as contents to be transferred.
 
-Requirements
-============
+### Requirements
+================
 In our implementation of the project, we do not require any extra packages besides the ones provided by the class environment: `os`, `time`, `numpy`, `pandas`, `torch`, `torchvision`, `PIL`, and `matplotlib`.
 
 To run the training scripts outside of the class environment, you may need to install some of the packages above. To install a missing package `LIBRARY_MISSING`, you may do the following command:  
@@ -63,8 +65,8 @@ To run the training scripts outside of the class environment, you may need to in
 $ pip install --user LIBRARY_MISSING
 ```
 
-Code organization
-=================  
+### Code organization
+=====================  
 `./`
  * [`proj_report_img/`](./proj_report_img)
  * [`cGAN_model/`](./cGAN_model)
@@ -105,4 +107,7 @@ Code organization
         Able to run in background with flags to customize settings 
         such as domain to train, use large train_set, and etc..  
  * [house.jpg](./house.jpg), [starry_night.jpg](./starry_night.jpg)
+
+### Example
+===========
 
