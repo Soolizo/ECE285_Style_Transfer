@@ -13,7 +13,8 @@ install the package as fllow:
 The origin style transfer also needs to download VGG19 network. And the training set of Cycle-GANs locates on the DSMLP of UCSD with the following directions:
 ```
 content_root_dir = "/datasets/ee285f-public/flickr_landscape/"
-
+```
+```
 style_root_dir = "/datasets/ee285f-public/wikiart/"
 ```
    
