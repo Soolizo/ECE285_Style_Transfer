@@ -44,10 +44,6 @@ We use the content image from one of Picasso's masterpiece, and style image from
 
 <img src="Origin/image/result.png" width = "256" height = "256" alt="Result" align=center />
 </div>
-
-       
-	
-    
     
 </br>
 </br>
@@ -114,12 +110,16 @@ $ pip install --user LIBRARY_MISSING
         Run training of our model through python script.
         Able to run in background with flags to customize settings 
         such as domain to train, use large train_set, and etc..  
- * [house.jpg](./cycleGAN/house.jpg), [starry_night.jpg](./cycleGAN/starry_night.jpg)
 
 ### Example
 To visualize the result, check 
  * [`domain_CycleGAN_demo.ipynb`](./cycleGAN/domain_CycleGAN_demo.ipynb) 
  
+ <div align=center />
+<img src="cycleGAN/proj_report_img/domain_exp_largeBS_decay_train.png" width = "512" height = "512"  />
+
+<img src="cycleGAN/proj_report_img/domain_exp_largeBS_decay.png"  height = "512" />
+</div>
 
  
 
