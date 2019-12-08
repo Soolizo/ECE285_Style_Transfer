@@ -1,13 +1,13 @@
 # ECE285 Style Transfer
 
-### Description
-
 This is UCSD ECE 285 Final Project B-Style Transfer, developed by team Learning Machine composed of `Bowen Zhao`, `Bolin He`, `Kunpeng Liu`.
 
   </br>
   </br>
   
 ## Part I: Neural Style Transfer
+
+### Description
 
 This is the version based on Gatys paper Style Transfer, it has tested on the UCSD DSMLP.
 The code locates in [__`Origin`__](./Origin) folder. 
